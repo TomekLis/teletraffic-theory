@@ -2,6 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import Data from '../../Data'
 import ParticlesComponent from '../particles/particles'
+import './line.css'
 
 const data = {
   labels: Data,
@@ -34,12 +35,7 @@ class LineExample extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-12">
-            <ParticlesComponent/>
-              {/* <Line data={data} /> */}
-        </div>
-      </div>
+      <Line data={data} />
     );
   }
 };

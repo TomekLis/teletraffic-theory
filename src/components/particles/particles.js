@@ -1,15 +1,16 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-
+import "./particless.css"
 class ParticlesComponent extends React.Component {
 
     render() {
-        return (
-            <Particles
-                params={{
+        return ( 
+            <Particles className = "particles-main"
+            params = {
+                {
                     particles: {
                         number: {
-                            value: 276,
+                            value: 50,
                             density: {
                                 enable: true,
                                 value_area: 800
@@ -48,11 +49,14 @@ class ParticlesComponent extends React.Component {
                             width: 1
                         }
                     }
-                }}
-                style={{
+                }
+            }
+            style = {
+                {
                     width: '100%',
                     background: "black"
-                }}
+                }
+            }
             />
         );
     };

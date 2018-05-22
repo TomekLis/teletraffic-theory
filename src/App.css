@@ -23,6 +23,66 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 2px #131415;
+  font-family: 'Open Sans', sans-serif;
+  animation: 5s ease-out 0s 1 slideInFromLeft;
+}
+
+h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+a,
+a:visited {
+  color: #e34234;
+  transition: 0.25s;
+}
+
+a:hover,
+a:focus {
+  color: #ba160c;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mainTitle {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.mainTitle h1 {
+  font-family: Fjalla One;
+  font-size: 8vw;
+  text-transform: uppercase;
+  line-height: 105%;
+  letter-spacing: -5px;
+  font-weight: 400;
+  margin: 15px 0 0;
+  color: white;
+}
+
+.mainTitle h2 {
+  padding-top: 5vh;
+  color:  #4BC0C0;
 }
