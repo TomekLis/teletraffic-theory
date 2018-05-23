@@ -1,4 +1,5 @@
 import React from 'react';
+import './TitlePage.css'
 
 class TitlePage extends React.Component {
 
