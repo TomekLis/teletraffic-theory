@@ -1,7 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import Data from '../../Data'
-import ParticlesComponent from '../particles/particles'
 import './line.css'
 
 const data = {
