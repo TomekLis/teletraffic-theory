@@ -6,6 +6,7 @@ import LineExample from './components/charts/line'
 import ParticlesComponent from './components/particles/particles';
 import 'bootstrap/dist/css/bootstrap.css';
 import TitlePage from './components/pages/TitlePage'
+import IntroductionPage from './components/pages/IntroductionPage'
 
 class App extends Component {
   render() {
@@ -15,10 +16,14 @@ class App extends Component {
         <ScrollContainer>
           <ScrollSection
             pageId={0}>
-            <TitlePage/>
+            <TitlePage />
           </ScrollSection>
           <ScrollSection
             pageId={1}>
+            <IntroductionPage />
+          </ScrollSection>
+          <ScrollSection
+            pageId={2}>
             <div className="row">
               <div className="col-md-6">
                 <h1>Program do wyznaczania GNR (TCBH, ADPH (ADPQH, ADPFH), FDMP, FDMH)</h1>
