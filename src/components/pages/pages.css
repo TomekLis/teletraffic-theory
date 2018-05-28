@@ -5,14 +5,17 @@
 }
 
 .text-content h1 {
+    text-transform: uppercase;
     padding-bottom: 10px;
 }
 
-.text-content h2,
-h3 {
+.text-content h2, h3 {
     padding-bottom: 5px
 }
 
 .text-content b {
     color: #4BC0C0;
+}
+.text-content.centerized h1{ 
+    text-align: center;
 }

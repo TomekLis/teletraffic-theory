@@ -1,0 +1,11 @@
+.text-content{
+    padding-top: 10vh;    
+}
+.text-content h1 {
+    
+    font-size: 11vh;
+    padding-bottom: 10vh;
+}
+.text-content h1 b {
+    color: white;
+}

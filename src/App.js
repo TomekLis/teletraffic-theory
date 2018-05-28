@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ScrollSection, ScrollContainer } from './components/scroll';
-import LineExample from './components/charts/line'
 import ParticlesComponent from './components/particles/particles';
 import 'bootstrap/dist/css/bootstrap.css';
-import TitlePage from './components/pages/TitlePage'
-import IntroductionPage from './components/pages/IntroductionPage'
+import TitlePage from './components/pages/TitlePage';
+import IntroductionPage from './components/pages/IntroductionPage';
+import DataSetsPage from './components/pages/DataSetsPage';
 
 class App extends Component {
   render() {
@@ -24,14 +24,7 @@ class App extends Component {
           </ScrollSection>
           <ScrollSection
             pageId={2}>
-            <div className="row">
-              <div className="col-md-6">
-                <h1>Program do wyznaczania GNR (TCBH, ADPH (ADPQH, ADPFH), FDMP, FDMH)</h1>
-              </div>
-              <div className="col-md-6">
-                <LineExample />
-              </div>
-            </div>
+              <DataSetsPage/>
           </ScrollSection>
         </ScrollContainer>
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import Data from '../../Data'
+import Data from './data/FractionData'
 import './line.css'
 
 const data = {
-  labels: Data,
+  labels: Data.labels,
   datasets: [
     {
       label: 'My First dataset',
@@ -25,12 +25,12 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: Data
-    }
+      data: Data.data
+    },
   ]
 };
 
-class LineExample extends React.Component {
+class FractionChart extends React.Component {
 
   render() {
     return (
@@ -38,4 +38,4 @@ class LineExample extends React.Component {
     );
   }
 };
-export default LineExample
+export default FractionChart
