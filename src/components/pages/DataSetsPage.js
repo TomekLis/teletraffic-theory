@@ -4,7 +4,7 @@ import './pages.css'
 import FractionChart from '../charts/FractionChart'
 import TimeData from '../charts/data/TimeData'
 
-const data = TimeData;
+const timeData = TimeData;
 class DataSetsPage extends React.Component {
     constructor() {
         super();
@@ -38,7 +38,12 @@ class DataSetsPage extends React.Component {
                             <div className="row">
                                 <h2><b>Średni czas trwania połączeń w ciągu badanej doby</b></h2>
                                 <br/>
-                                <h2>{this.calculateAverage(data)}[s]</h2>
+                                <h2>{this.calculateAverage(timeData)}[s]</h2>
+                            </div>
+                            <div className="row">
+                                <h2><b>Liczba wywołań w ciągu doby</b></h2>
+                                <br/>
+                                <h2>{this.calculateAverage(timeData)}[s]</h2>
                             </div>
                         </div>
                     </div>
