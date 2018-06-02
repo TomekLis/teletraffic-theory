@@ -3,6 +3,8 @@ import './DataSetsPage.css'
 import './pages.css'
 import FractionChart from '../charts/FractionChart'
 import TimeData from '../charts/data/TimeData'
+import FractionData from '../charts/data/FractionData'
+import {calculateBusiestHour, calculateAverage} from '../charts/calculation/BusyHour'
 
 const timeData = TimeData;
 class DataSetsPage extends React.Component {
@@ -14,13 +16,6 @@ class DataSetsPage extends React.Component {
         };
     }
     
-    calculateAverage = (dataArray) =>{
-        var sum = dataArray.reduce((previous, current) => current += previous);
-        var avg = sum/dataArray.length;
-        return avg;
-    }
-
-
     render() {
         return (
             <div className="row text-content centerized">
@@ -38,12 +33,13 @@ class DataSetsPage extends React.Component {
                             <div className="row">
                                 <h2><b>Średni czas trwania połączeń w ciągu badanej doby</b></h2>
                                 <br/>
-                                <h2>{this.calculateAverage(timeData)}[s]</h2>
+                                <h2>{calculateAverage(timeData)}[s]</h2>
                             </div>
                             <div className="row">
                                 <h2><b>Liczba wywołań w ciągu doby</b></h2>
                                 <br/>
-                                <h2>{this.calculateAverage(timeData)}[s]</h2>
+                                <h2>{calculateAverage(timeData)}[s]</h2>
+                                {calculateBusiestHour(FractionData.labels, FractionData.data)}
                             </div>
                         </div>
                     </div>
