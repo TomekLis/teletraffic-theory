@@ -7,14 +7,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import TitlePage from './components/pages/TitlePage';
 import IntroductionPage from './components/pages/IntroductionPage';
 import DataSetsPage from './components/pages/DataSetsPage';
-
+import BusiestHourMethods from './components/pages/BusiestHourMethods'
 class App extends Component {
   render() {
     return (
       <div>
         <ParticlesComponent />
         <ScrollContainer>
-          <ScrollSection
+          {/* <ScrollSection
             pageId={0}>
             <TitlePage />
           </ScrollSection>
@@ -23,8 +23,13 @@ class App extends Component {
             <IntroductionPage />
           </ScrollSection>
           <ScrollSection
-            pageId={2}>
-              <DataSetsPage/>
+            pageId={2}
+          >
+          <BusiestHourMethods/>
+          </ScrollSection> */}
+          <ScrollSection
+            pageId={0}>
+            <BusiestHourMethods/>
           </ScrollSection>
         </ScrollContainer>
       </div>

@@ -30,11 +30,27 @@ const data = {
   ]
 };
 
+const plugins = [{
+  beforeDraw: (chartInstance, easing) => {
+
+
+    const ctx = chartInstance.ctx;
+
+    ctx.beginPath();
+    ctx.strokeStyle = "grey";
+    ctx.moveTo(50, 0);
+    ctx.lineTo(150, 130);
+    ctx.stroke(); // Draw it
+  }
+}];
+
 class FractionChart extends React.Component {
+
 
   render() {
     return (
-      <Line data={data} />
+      <Line data={data}
+        plugins={plugins} />
     );
   }
 };
