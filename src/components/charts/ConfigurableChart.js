@@ -38,10 +38,10 @@ class ConfigurableChart extends React.Component {
         }];
         var chartData = this.props.data
         const data = {
-            labels: [1, 2, 3, 4, 5, 6, 7],
+            labels: [   1, 2, 3, 4, 5, 6, 7],
             datasets: [
                 {
-                    label: 'My First dataset',
+                    label: 'Intensywność ruchu',
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'rgba(75,192,192,0.4)',
@@ -59,19 +59,25 @@ class ConfigurableChart extends React.Component {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
+                    scaleSteps: 10,
                     data: chartData
                 }
             ]
         };
-        // const options = {
-        //     animation:{
-        //         duration:0
-        //     }
-        // }
+        const options = {
+            scales:{
+                yAxes: [{
+                    ticks: {
+                        max: 90,
+                    }
+                }]
+            }
+        }
         return (
             <div>
                 <Line data={data}
                     plugins={plugins}
+                    options={options}
                 />
             </div>
         );

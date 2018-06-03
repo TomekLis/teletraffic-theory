@@ -7,14 +7,17 @@ import 'bootstrap/dist/css/bootstrap.css';
 import TitlePage from './components/pages/TitlePage';
 import IntroductionPage from './components/pages/IntroductionPage';
 import DataSetsPage from './components/pages/DataSetsPage';
-import BusiestHourMethods from './components/pages/BusiestHourMethods'
+import AdphMethodPage from './components/pages/AdphMethodPage'
+import TcbhMethodPage from './components/pages/TcbhMethodPage'
+import FdmhMethodPage from './components/pages/FdmhMethodPage'
+
 class App extends Component {
   render() {
     return (
       <div>
         <ParticlesComponent />
         <ScrollContainer>
-          {/* <ScrollSection
+          <ScrollSection
             pageId={0}>
             <TitlePage />
           </ScrollSection>
@@ -25,11 +28,18 @@ class App extends Component {
           <ScrollSection
             pageId={2}
           >
-          <BusiestHourMethods/>
-          </ScrollSection> */}
+            <DataSetsPage />
+          </ScrollSection>
           <ScrollSection
-            pageId={0}>
-            <BusiestHourMethods/>
+            pageId={3}>
+            <AdphMethodPage />
+          </ScrollSection>
+          <ScrollSection
+            pageId={4}>
+            <TcbhMethodPage />
+          </ScrollSection>
+          <ScrollSection pageId={5}>
+            <FdmhMethodPage />
           </ScrollSection>
         </ScrollContainer>
       </div>

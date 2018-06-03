@@ -18,9 +18,11 @@ class TitlePage extends React.Component {
                         <b>λ</b> - liczba połączeń w określonym czasie. <br/>
                         <b>T</b> - średni czas połączenia <br/>
                     </p>
+                    <br/>
                     <h3>
                         LUB
                     </h3>
+                    <br/>
                     <h2> <b>i = a<sup>L</sup>&frasl;<sub>R</sub></b></h2>
                     <p>
                         gdzie:<br/>
