@@ -30,24 +30,42 @@ const data = {
   ]
 };
 
-const plugins = [{
-  beforeDraw: (chartInstance, easing) => {
-
-
-    const ctx = chartInstance.ctx;
-
-    ctx.beginPath();
-    ctx.strokeStyle = "grey";
-    ctx.moveTo(50, 0);
-    ctx.lineTo(150, 130);
-    ctx.stroke(); // Draw it
-  }
-}];
+function drawLine(ctx, pointStart, chartInstance) {
+  ctx.beginPath();
+  ctx.strokeStyle = "grey";
+  ctx.moveTo(pointStart, 0);
+  ctx.lineTo(pointStart, chartInstance.scales["y-axis-0"].bottom);
+  ctx.stroke();
+}
 
 class FractionChart extends React.Component {
 
 
   render() {
+    var busyHour = this.props.busyHour;
+    var startLine = busyHour.startMinute
+    var endLine = busyHour.endMinute
+
+    const plugins = [{
+      beforeDraw: (chartInstance, easing) => {
+        const ctx = chartInstance.ctx;
+        var startIndex = chartInstance.data.labels.indexOf(startLine)
+        var endIndex = chartInstance.data.labels.indexOf(endLine)
+        if (startIndex != -1) {
+          var meta = undefined
+          var i = 0
+          while (meta === undefined || i == 500) {
+            meta = chartInstance.data.datasets[0]._meta[i] //why? after using more than one chart I had a problem that I Solved Like this 
+            i++;
+          }
+          var pointStart = meta.data[startIndex]._model.x
+          var pointEnd = meta.data[endIndex]._model.x
+          drawLine(ctx, pointStart, chartInstance)
+          drawLine(ctx, pointEnd, chartInstance)
+        }
+      }
+    }];
+
     return (
       <Line data={data}
         plugins={plugins} />

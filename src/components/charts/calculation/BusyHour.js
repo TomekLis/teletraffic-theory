@@ -2,13 +2,14 @@ export function calculateBusiestHour(minutes, calls) {
     const hours = devideToHours(minutes)
     for (let index = 0; index < hours.length; index++) {
         const hour = hours[index];
-        const averageTraffic = calculateAverage(calls.slice(minutes.indexOf(hour.startMinute), minutes.indexOf(hour.endMinute)));
+        const averageTraffic = calculateAverage(calls.slice(minutes.indexOf(hour.startMinute), minutes.indexOf(hour.endMinute+1)));
         hour.averageTraffic = averageTraffic;
     }
     const busiestHour = hours.reduce(function (a, b) {
         return a.averageTraffic > b.averageTraffic ? a : b
     });
     console.log(busiestHour)
+    return busiestHour;
 }
 export function calculateAverage(dataArray) {
     var sum = dataArray.reduce((previous, current) => current += previous);

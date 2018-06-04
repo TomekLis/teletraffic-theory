@@ -1,0 +1,18 @@
+.centerized h1,
+h2 {
+    text-align: center
+}
+
+.text-section {
+    padding-bottom: 30px
+}
+
+.text-section h1 {
+    padding-bottom: 5px
+}
+
+.border {
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    text-align: center;
+}

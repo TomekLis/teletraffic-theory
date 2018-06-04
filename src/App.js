@@ -10,6 +10,7 @@ import DataSetsPage from './components/pages/DataSetsPage';
 import AdphMethodPage from './components/pages/AdphMethodPage'
 import TcbhMethodPage from './components/pages/TcbhMethodPage'
 import FdmhMethodPage from './components/pages/FdmhMethodPage'
+import BusyHourMethodsPage from './components/pages/BusyHourMethodsPage'
 
 class App extends Component {
   render() {
@@ -25,10 +26,8 @@ class App extends Component {
             pageId={1}>
             <IntroductionPage />
           </ScrollSection>
-          <ScrollSection
-            pageId={2}
-          >
-            <DataSetsPage />
+          <ScrollSection pageId={2}>
+            <BusyHourMethodsPage/>
           </ScrollSection>
           <ScrollSection
             pageId={3}>
@@ -40,6 +39,11 @@ class App extends Component {
           </ScrollSection>
           <ScrollSection pageId={5}>
             <FdmhMethodPage />
+          </ScrollSection>
+          <ScrollSection
+            pageId={6}
+          >
+            <DataSetsPage />
           </ScrollSection>
         </ScrollContainer>
       </div>
