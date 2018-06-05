@@ -5,7 +5,7 @@ import './BusyHourMethodsPage.css'
 class BusyHourMethodsPage extends React.Component {
     render() {
         return (
-            <div className="row text-content centerized">
+            <div className="row text-content centerize">
                 <div className="col-md-12">
                     <div className="row text-section">
                         <div className="offset-3 col-md-6">
