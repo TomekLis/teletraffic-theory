@@ -1,5 +1,9 @@
 import React from 'react'
 const data = {
+    data1: {
+        labels: [0, 30, 60, 90, 120, 150, 180, 210],
+        data: [45, 50, 60, 85, 35, 40, 35, 30]
+    },
     labels: [1,
         2,
         4,
