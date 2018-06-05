@@ -2,7 +2,7 @@ export function calculateBusiestHour(minutes, calls) {
     const hours = devideToHours(minutes)
     for (let index = 0; index < hours.length; index++) {
         const hour = hours[index];
-        const averageTraffic = calculateAverage(calls.slice(minutes.indexOf(hour.startMinute), minutes.indexOf(hour.endMinute+1)));
+        const averageTraffic = calculateAverage(calls.slice(minutes.indexOf(hour.startMinute), minutes.indexOf(hour.endMinute)+1));
         hour.averageTraffic = averageTraffic;
     }
     const busiestHour = hours.reduce(function (a, b) {
