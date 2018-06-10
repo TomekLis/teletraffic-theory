@@ -6,9 +6,9 @@ class TitlePage extends React.Component {
         return (
             <div className="row text-content">
                 <div className="offset-1 col-md-5 border-1">
-                    <h1><b>Intensywność ruchu</b></h1>
+                    <h1><b>Intensywność wywołań</b></h1>
                     <p>
-                        W sieciach telekomunikacyjnych natężenie ruchu jest miarą przeciętnego obłożenia serwera lub zasobu w określonym czasie, zwykle w godzinach pracy. Mierzone jest w jednostkach ruchu (erlangach) i definiowane jako stosunek czasu, w którym obiekt jest łącznie zajęty, do momentu, w którym obiekt ten jest dostępny dla obłożenia.
+                        W sieciach telekomunikacyjnych jest miarą przeciętnego obłożenia serwera lub zasobu w określonym czasie, zwykle w godzinach pracy. Mierzone jest w jednostkach ruchu (erlangach) i definiowane jako stosunek czasu, w którym obiekt jest łącznie zajęty, do momentu, w którym obiekt ten jest dostępny dla obłożenia.
                     </p>
                 </div>
                 <div className="offset-1 col-md-3">

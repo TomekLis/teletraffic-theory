@@ -17,17 +17,18 @@ class FdmhMethodPage extends React.Component {
                 </div>
                 <div className="offset-2 col-md-3">
                     <div>
-                        <ConfigurableChart startLine={2} endLine={3} data={[40, 60, 80, 85, 55, 50, 40]} />
+                        {}
+                        <ConfigurableChart defalutValue={true} startLine={2} endLine={3} data={{ labels: [1, 2, 3, 4, 5, 6, 7], data: [40, 60, 80, 85, 55, 50, 40] }} />
                     </div>
                     <div>
-                        <ConfigurableChart startLine={2} endLine={3} data={[40, 80, 85, 60, 55, 50, 40]} />
+                        <ConfigurableChart defalutValue={true} startLine={2} endLine={3} data={{ labels: [1, 2, 3, 4, 5, 6, 7], data: [40, 80, 85, 60, 55, 50, 40] }} />
                     </div>
                     <div>
-                        <ConfigurableChart startLine={2} endLine={3} data={[40, 60, 55, 80, 85, 50, 40]} />
+                        <ConfigurableChart defalutValue={true} startLine={2} endLine={3} data={{ labels: [1, 2, 3, 4, 5, 6, 7], data: [40, 60, 55, 80, 85, 50, 40] }} />
                     </div>
                 </div>
-            </div>
-        );
-    }
-}
+                </div>
+                );
+            }
+        }
 export default FdmhMethodPage

@@ -13,9 +13,10 @@ import FdmhMethodPage from './components/pages/FdmhMethodPage'
 import BusyHourMethodsPage from './components/pages/BusyHourMethodsPage'
 
 class App extends Component {
+
   render() {
     return (
-      <div>
+      <div>        
         <ParticlesComponent />
         <ScrollContainer>
           <ScrollSection

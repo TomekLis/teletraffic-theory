@@ -1,8 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-
-
 function drawLine(ctx, pointStart, chartInstance) {
     ctx.beginPath();
     ctx.strokeStyle = "grey";
@@ -14,20 +12,17 @@ function drawLine(ctx, pointStart, chartInstance) {
 class ConfigurableChart extends React.Component {
 
     render() {
-        var startLine = this.props.startLine
-        var endLine = this.props.endLine
-
         const plugins = [{
             beforeDraw: (chartInstance, easing) => {
                 const ctx = chartInstance.ctx;
-                var startIndex = chartInstance.data.labels.indexOf(startLine)
-                var endIndex = chartInstance.data.labels.indexOf(endLine)
+                var startIndex = chartInstance.data.labels.indexOf(this.props.startLine)
+                var endIndex = chartInstance.data.labels.indexOf(this.props.endLine)
                 if (startIndex != -1) {
                     var meta = undefined
                     var i = 0
-                    while (meta===undefined || i == 500) {
+                    while (meta === undefined) {
                         meta = chartInstance.data.datasets[0]._meta[i] //why? after using more than one chart I had a problem that I Solved Like this 
-                        i++;                   
+                        i++;
                     }
                     var pointStart = meta.data[startIndex]._model.x
                     var pointEnd = meta.data[endIndex]._model.x
@@ -36,12 +31,13 @@ class ConfigurableChart extends React.Component {
                 }
             }
         }];
-        var chartData = this.props.data
+        var chartData = this.props.data.data
+        var chartLabels = this.props.data.labels
         const data = {
-            labels: [   1, 2, 3, 4, 5, 6, 7],
+            labels: chartLabels,
             datasets: [
                 {
-                    label: 'Intensywność ruchu',
+                    label: 'Intensywność wywołań',
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'rgba(75,192,192,0.4)',
@@ -64,13 +60,16 @@ class ConfigurableChart extends React.Component {
                 }
             ]
         };
-        const options = {
-            scales:{
-                yAxes: [{
-                    ticks: {
-                        max: 90,
-                    }
-                }]
+        var options={}
+        if (this.props.defaultValue) {
+             options = {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 90,
+                        }
+                    }]
+                }
             }
         }
         return (
